@@ -5,7 +5,7 @@
 - **Eric J. Pedersen**. Author, maintainer.
   [](https://orcid.org/0000-0003-1016-540X)
 
-- **Gavin L. Simpson**. Author.
+- **[Gavin L. Simpson](https://fromthebottomoftheheap.net)**. Author.
   [](https://orcid.org/0000-0002-4842-3657)
 
 - **Valentin Lucet**. Contributor.
@@ -14,7 +14,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/eric-pedersen/MRFtools/blob/master/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/eric-pedersen/MRFtools/blob/main/DESCRIPTION)
 
 Pedersen E, Simpson G (2026). *MRFtools: Tools for Constructing and
 Plotting Markov Random Fields in R for Graphical Data*. R package
