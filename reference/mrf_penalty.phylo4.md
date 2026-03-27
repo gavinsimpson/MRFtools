@@ -1,11 +1,11 @@
-# MRF penalty from a phylogeny
+# MRF penalty from a phylogeny from a phylo4 object
 
-MRF penalty from a phylogeny
+MRF penalty from a phylogeny from a phylo4 object
 
 ## Usage
 
 ``` r
-# S3 method for class 'phylo'
+# S3 method for class 'phylo4'
 mrf_penalty(
   object,
   model = c("rw1", "ou", "brownian"),
@@ -56,5 +56,27 @@ mrf_penalty(
 ## Examples
 
 ``` r
-#Example code
+#loading the geospiza dataset from phylobase
+library(phylobase)
+data(geospiza)
+
+#Random-walk (rw1) penalty for both tips and nodes:
+pen_rw <- mrf_penalty(geospiza, model = "rw1")
+
+#Same model, but for a reduced number of species
+species <- c("fortis", "pauper", "fusca", "olivacea")
+pen_rw_subset <- mrf_penalty(geospiza, model = "rw1", at_tips = species)
+plot(get_obj(pen_rw_subset))
+
+
+#Random-walk penalty matrix for just the tips for all geospiza data:
+pen_rw_tips <- mrf_penalty(geospiza, model = "rw1", internal_nodes = FALSE)
+pen_rw_tips
+#> Markov Random Field penalty
+#> Type: tree
+#> N   : 14
+
+#Ornstein-Uhlenbeck ("ou") process penalty matrix, specifying alpha parameter (autocorrelation)
+pen_ou <- mrf_penalty(geospiza, model = "ou", alpha = 1)
+
 ```

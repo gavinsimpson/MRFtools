@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">MRFtools</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0-3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0-4</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,10 +42,11 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S3 method for class 'phylo'</span></span>
 <span><span class="fu"><a href="mrf_penalty.html">mrf_penalty</a></span><span class="op">(</span></span>
 <span>  <span class="va">object</span>,</span>
-<span>  model <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"rw1"</span>, <span class="st">"Brownian"</span><span class="op">)</span>,</span>
-<span>  node_labels <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  model <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"rw1"</span>, <span class="st">"ou"</span>, <span class="st">"brownian"</span><span class="op">)</span>,</span>
+<span>  alpha <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  at_tips <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  internal_nodes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  delta <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  eps <span class="op">=</span> <span class="fl">0</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -64,9 +65,18 @@ fully connected graph (<code>"full"</code>) or a random effect (random intercept
 <code>"individual"</code>) penalty is created.</p></dd>
 
 
-<dt id="arg-node-labels">node_labels<a class="anchor" aria-label="anchor" href="#arg-node-labels"></a></dt>
-<dd><p>character; a vector of alternative labels for the levels
-of the factor.</p></dd>
+<dt id="arg-alpha">alpha<a class="anchor" aria-label="anchor" href="#arg-alpha"></a></dt>
+<dd><p>numeric</p></dd>
+
+
+<dt id="arg-at-tips">at_tips<a class="anchor" aria-label="anchor" href="#arg-at-tips"></a></dt>
+<dd><p>TODO</p></dd>
+
+
+<dt id="arg-internal-nodes">internal_nodes<a class="anchor" aria-label="anchor" href="#arg-internal-nodes"></a></dt>
+<dd><p>logical; should the internal nodes of the tree be
+included in the penalty (<code>TRUE</code>), or just the tips (terminal nodes;
+<code>FALSE</code>)</p></dd>
 
 
 <dt id="arg-delta">delta<a class="anchor" aria-label="anchor" href="#arg-delta"></a></dt>
@@ -76,16 +86,17 @@ an adjustment should be made. The default is to not alter the diagonal of
 the penalty matrix.</p></dd>
 
 
-<dt id="arg-eps">eps<a class="anchor" aria-label="anchor" href="#arg-eps"></a></dt>
-<dd><p>A value to add to the variance-covariance matrix diagonal to
-make it positive definite</p></dd>
-
-
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
 <dd><p>arguments passed to other methods.</p></dd>
 
 </dl></div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">#Example code</span></span></span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 
